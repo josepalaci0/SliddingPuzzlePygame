@@ -1,4 +1,4 @@
-import pygame
+import pygame 
 import random
 import time
 from sprite import *
@@ -92,8 +92,8 @@ class Game:
         self.start_timer = False
         self.start_game = False
         self.buttons_list = []
-        self.buttons_list.append(Button(500, 100, 200, 50, "Shuffle", WHITE, BLACK))
-        self.buttons_list.append(Button(500, 170, 200, 50, "Reset", WHITE, BLACK))
+        self.buttons_list.append(Button(500, 100, 200, 50, "Iniciar", WHITE, BLACK))
+        self.buttons_list.append(Button(500, 170, 200, 50, "Reiniciar", WHITE, BLACK))
         self.draw_tiles()
 
     def run(self):
@@ -129,6 +129,9 @@ class Game:
                 self.start_timer = True
 
         self.all_sprites.update()
+
+            
+
 
     def draw_grid(self):
         for row in range(-1, GAME_SIZE * TILESIZE, TILESIZE):
